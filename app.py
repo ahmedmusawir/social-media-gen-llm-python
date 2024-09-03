@@ -81,11 +81,11 @@ col1, col2 = st.columns(2)
 # Custom CSS for styling the code block
 custom_css = """
     <style>
-    .st-emotion-cache-16nrs4v {
-        height: 500px !important;
-        border: 5px solid lightgray;
-        padding: 10px !important;
-    }    
+    #twitter-posts, #facebook-posts {
+        border: 4px solid lightgray;
+        padding-left: 1rem;
+    }
+    
     .stCode {
         padding-top: 50px !important;
         border: 5px solid gray;
@@ -131,7 +131,7 @@ with col2:
         if st.button("Generate Facebook Image", key="generate_facebook_image"):
             with st.spinner('Generating Facebook image...'):
                 image_generator = ImageGenerator()
-                st.session_state.facebook_image_url = image_generator.create_image(f"Generate an image suitable for a Facebook post about {st.session_state.topic}. {st.session_state.summary}", size="1024x1024")
+                st.session_state.facebook_image_url = image_generator.create_image(f"Generate an image suitable for a Facebook post about {st.session_state.topic}. {st.session_state.summary}", size="1792x1024")
 
     # Display Facebook image if generated
     if st.session_state.facebook_image_url:
