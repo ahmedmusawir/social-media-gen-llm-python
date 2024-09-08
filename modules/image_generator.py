@@ -1,5 +1,4 @@
 # modules/image_generator.py
-
 from openai import OpenAI
 
 class ImageGenerator:

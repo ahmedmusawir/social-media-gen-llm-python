@@ -5,6 +5,7 @@ from langchain.prompts import PromptTemplate
 from langchain.chains.combine_documents import create_stuff_documents_chain
 import os
 from decouple import config
+from modules.post_generator import SocialMediaPostGenerator
 from modules.utils import clean_text, calculate_token_size
 
 # Enable tracing
